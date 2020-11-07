@@ -1,0 +1,125 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.25;
+  height: 100vh;
+  background-color: #2f3135;
+}
+/* #1 */
+.sidebar__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #2f3135;
+  color: white;
+  border-bottom: 3px solid #26282c;
+}
+
+/* #2 */
+.sidebar__channels {
+  flex: 1; /*take most space*/
+  overflow: scroll;
+}
+
+/* #2.1 */
+.sidebar__channelsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f3135;
+  color: gray;
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar__addChannel {
+  cursor: pointer;
+}
+
+.sidebar__addChannel:hover {
+  color: white;
+}
+
+/* #3,4 */
+.sidebar__voice,
+.sidebar__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  background-color: #2f3135;
+  padding: 10px;
+  border-top: 1px solid gray;
+}
+
+/* #3.1 */
+.sidebar__voiceIcon {
+  color: #4fb185;
+}
+
+/* #3.2,4.2 */
+.sidebar__voiceInfo,
+.sidebar__profileInfo {
+  flex: 1; /* majority of space by voiceInfo */
+  padding: 10px;
+}
+
+.sidebar__voiceInfo > h3 {
+  color: #4fb185;
+}
+
+.sidebar__voiceInfo > p {
+  font-size: smaller;
+}
+
+/* #3.3 */
+.sidebar__voiceIcons > .MuiSvgIcon-root {
+  padding: 8px;
+}
+
+/* #4.1 */
+.sidebar__avatarIcon:hover {
+  cursor: pointer;
+}
+
+/* #4.2 */
+.sidebar__profileInfo > h3 {
+  color: white;
+  font-size: medium;
+}
+
+/* #4.3 */
+.sidebar__profileIcons > .MuiSvgIcon-root {
+  padding: 5px;
+}
+
+.sidebar__hoverText {
+  visibility: hidden;
+  width: fit-content;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 2px;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -5px;
+  z-index: 1;
+}
+.sidebar__avatarIcon:hover + .sidebar__hoverText {
+  visibility: visible;
+}
+
+.sidebar__channels::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidebar__channels {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
